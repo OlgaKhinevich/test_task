@@ -1,6 +1,7 @@
 function showPercentInfo() {
     const percentContainer = document.querySelector('radio-ctrl[name="paymentMode"] a');
     let price = document.querySelector('.total').innerText;
+    if (!percentContainer || !price) return;
     price = price.replace(/[^0-9]/g, '');
     let newInfo = document.createElement('div');
     if (price < 30000) {

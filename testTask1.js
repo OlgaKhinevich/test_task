@@ -1,5 +1,6 @@
 function addNewPrice() {
     const priceNodes = document.querySelectorAll('.product-page-wrapper .product-grid .item > .price');
+    if(!priceNodes) return;
     let priceValue = priceNodes[priceNodes.length - 1].innerText;
     priceValue = priceValue.replace(/[^0-9]/g, '');
     if (priceValue < 30000) {
